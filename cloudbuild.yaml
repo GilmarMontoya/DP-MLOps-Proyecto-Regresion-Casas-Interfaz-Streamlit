@@ -1,0 +1,5 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-f', 'Dockerfile.prod', '-t', 'us-central1-docker.pkg.dev/datapath-mlops-kevin-inofuente/repositorio-regresion-casas-streamlit/image-v1-regresion-casas-interfaz-streamlit:latest', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/datapath-mlops-kevin-inofuente/repositorio-regresion-casas-streamlit/image-v1-regresion-casas-interfaz-streamlit:latest']
